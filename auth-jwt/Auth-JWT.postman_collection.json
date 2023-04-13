@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "681b9890-137f-40b1-97fc-36ccbd2154f1",
+		"name": "Auth-JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "838701"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjp7ImlkIjoxLCJlbWFpbCI6ImFuZHJlc0BnbWFpbC5jb20iLCJyb2wiOjF9LCJpYXQiOjE2NzA4MDE2MTAsImV4cCI6MTY3MDg4ODAxMH0.DfSvBwPIhCi8iRpWVgplqe4r9HdO_dsxy431w7mm-Gc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/roles",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marcas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/marcas",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"marcas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjp7ImlkIjoxLCJlbWFpbCI6ImFuZHJlc0BnbWFpbC5jb20iLCJyb2wiOjF9LCJpYXQiOjE2NzA2ODExMjcsImV4cCI6MTY3MDc2NzUyN30.0pvjx8b28DBRCbPga9Z90YLpiOJtgnCAQaSZGjB2Y58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/inventarios",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"inventarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tipos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/tipos",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"tipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tipos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Tipo 1\",\r\n    \"estado\": \"Activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/tipos",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"tipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Andrés\",\r\n    \"email\": \"andres@gmail.com\",\r\n    \"password\": \"@nDr3s2k-@\",\r\n    \"estado\": 1,\r\n    \"rol_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/usuarios",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"andres@gmail.com\",\r\n    \"password\": \"@nDr3s2k-@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/usuarios/login",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marcas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjp7ImlkIjo2LCJlbWFpbCI6Imx1aXNAbWFpbC5jbyIsInJvbCI6MX0sImlhdCI6MTY3MDY3ODk1MCwiZXhwIjoxNjcwNzY1MzUwfQ.hTs_3ADvkDx2U7CxCP7SGZUyqJG5df5hkzh5jPFH9LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Marca 10\",\r\n    \"estado\": \"Activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/marcas",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"marcas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjp7ImlkIjo2LCJlbWFpbCI6Imx1aXNAbWFpbC5jbyIsInJvbCI6MX0sImlhdCI6MTY3MDY3ODk1MCwiZXhwIjoxNjcwNzY1MzUwfQ.hTs_3ADvkDx2U7CxCP7SGZUyqJG5df5hkzh5jPFH9LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial\": \"SER123L789\",\r\n    \"modelo\": 2012,\r\n    \"descripcion\": \"Esta es una descripción\",\r\n    \"color\": \"Negro\",\r\n    \"fecha_compra\": \"2022-05-19\",\r\n    \"precio\": 1000,\r\n    \"estado\": 1,\r\n    \"tipo_id\": 1,\r\n    \"marca_id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUTH_JWT_BACKEND}}/inventarios",
+					"host": [
+						"{{AUTH_JWT_BACKEND}}"
+					],
+					"path": [
+						"inventarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
